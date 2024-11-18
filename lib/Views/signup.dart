@@ -50,11 +50,15 @@ class _SignupScreenState extends State<SignupScreen> {
                     icon: Icons.account_circle,
                     controller: userName),
                 InputField(
-                    hint: "Password", icon: Icons.lock, controller: password),
+                    hint: "Password",
+                    icon: Icons.lock,
+                    controller: password,
+                    passwordInvisible: true),
                 InputField(
                     hint: "Re-enter password",
                     icon: Icons.lock,
-                    controller: confirmPassword),
+                    controller: confirmPassword,
+                    passwordInvisible: true),
                 const SizedBox(
                   height: 20,
                 ),
