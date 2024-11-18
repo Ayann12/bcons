@@ -1,6 +1,7 @@
 import 'package:bcons/Components/button.dart';
 import 'package:bcons/Components/colors.dart';
 import 'package:bcons/Components/textfield.dart';
+import 'package:bcons/Views/profile.dart';
 import 'package:bcons/Views/signup.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +28,10 @@ class _LoginScreenState extends State<LoginScreen> {
           children: [
             const Text(
               "E-BCons",
-              style: TextStyle(color: primaryColor, fontSize: 40),
+              style: TextStyle(
+                  color: primaryColor,
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold),
             ),
             Image.asset(
               "assets/logo.png",
@@ -55,7 +59,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 },
               ),
             ),
-            Button(label: "LOGIN", press: () {}),
+            Button(
+                label: "LOGIN",
+                press: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Profile()));
+                }),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
